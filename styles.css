@@ -6,9 +6,9 @@ body {
 }
 
 #header {
-    margin: 1%;
+    margin: 0.5%;
     margin-bottom: 0;
-    padding: 0.5%;
+    padding: 0.25%;
     text-align: center;
     font-size: 1.4rem;
     background-color: darkblue;
@@ -24,8 +24,8 @@ body {
     position: sticky;
     top: 0;
     background-color: black;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
     z-index: 1;
 }
 
@@ -39,20 +39,20 @@ body {
     background-color: pink;
     text-align: center;
     padding-left: 0;
-    width: 21.75%;
+    width: 23.37%;
     font-size: 1.3rem;
-    padding: 1%;
+    padding: 0.5%;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
+    margin-left: 0.25%;
+    margin-right: 0.25%;
 }
 
 #content {
     font-size: 0;
     text-align: center;
     display: flex;
-    margin: 1%;
+    margin: 0.5%;
     margin-top: 0;
 }
 
@@ -63,14 +63,14 @@ body {
 
 #leftcol {
     background-color: green;
-    width: 19%;
-    margin-right: 0.5%;
+    width: 19.25%;
+    margin-right: 0.25%;
 }
 
 #rightcol {
     background-color: red;
-    width: 80%;
-    margin-left: 0.5%;
+    width: 80.25%;
+    margin-left: 0.25%;
 }
 
 #footer {
