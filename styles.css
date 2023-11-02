@@ -3,16 +3,16 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: black;
+    font-family: sans-serif;
 }
 
+
 #header {
-    margin: 0.5%;
-    margin-bottom: 0;
     padding: 0.25%;
     text-align: center;
     font-size: 1.4rem;
     background-color: darkblue;
-    color: white
+    color: white;
 }
 
 
@@ -24,8 +24,8 @@ body {
     position: sticky;
     top: 0;
     background-color: black;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
     z-index: 1;
 }
 
@@ -36,41 +36,24 @@ body {
 
 #navbar ul {
     display: inline-block;
-    background-color: pink;
+    background-color: lightcoral;
     text-align: center;
     padding-left: 0;
-    width: 23.37%;
-    font-size: 1.3rem;
-    padding: 0.5%;
+    width: 32.535%;
+    font-size: 1.4vw;
+    padding: 0.3%;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 0.25%;
-    margin-right: 0.25%;
+    margin-left: 0.15%;
+    margin-right: 0.15%;
 }
 
 #content {
     font-size: 0;
     text-align: center;
     display: flex;
-    margin: 0.5%;
+    margin-bottom: 0.3%;
     margin-top: 0;
-}
-
-.cols {
-    display: inline-block;
-    font-size: 1rem;
-}
-
-#leftcol {
-    background-color: green;
-    width: 19.25%;
-    margin-right: 0.25%;
-}
-
-#rightcol {
-    background-color: red;
-    width: 80.25%;
-    margin-left: 0.25%;
 }
 
 #footer {

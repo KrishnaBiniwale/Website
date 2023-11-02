@@ -7,8 +7,129 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Krishna Biniwale">
 
-    <link rel="stylesheet" href="/styles.css">
+    <!--<link rel="stylesheet" href="/styles.css">-->
+    <link rel="stylesheet" href="styles.css">
     <style>
+        .cols {
+            display: inline-block;
+            font-size: 1.5vw;
+        }
+
+        #leftcol {
+            background-color: white;
+            width: 14.85%;
+            margin-right: 0.15%;
+            position: relative;
+        }
+
+        #leftcol-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.4vw;
+            width: 100%;
+            padding-left: 0%;
+            padding-right: 0%;
+        }
+
+        #rightcol {
+            background-color: white;
+            width: 84.85%;
+            margin-left: 0.15%;
+        }
+
+        #rightcol-content {
+            padding: 0% 2% 0% 2%;
+        }
+
+        #rightcol-content p {
+            text-align: left;
+        }
+
+        #Introduction #introduction-content {
+            display: flex;
+        }
+
+        #headshot {
+            float: left;
+            width: 20%;
+            height: 20%;
+            border-radius: 20%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            margin-top: 3%;
+        }
+
+        #programming-languages1,
+        #programming-languages2 {
+            display: inline-flex;
+        }
+
+        /*.programming-languages-logo {
+            width: 9vw;
+            border: 1px solid blue;
+        }
+
+        #threelogos {
+            max-width: 24vw;
+            min-width: 24vw;
+        }
+
+        .programming-languages-logo img {
+            max-height: 8vw;
+            min-height: 8vw;
+            max-width: 8vw;
+            min-width: 8vw;
+            width: 70%;
+            height: auto;
+            border: 1px solid green;
+            overflow: hidden;
+        }
+
+        #threelogosimg {
+            max-width: 24vw;
+            min-width: 24vw;
+        }*/
+
+        .programming-languages-logo {
+            margin: 2%;
+        }
+
+        .programming-languages-logo img {
+            height: 10vw;
+        }
+
+        #CLogo {
+            width: 11vw;
+            height: 11vw;
+        }
+
+        #CppLogo {
+            width: 12vw;
+            height: 12vw;
+            margin-top: 0%;
+        }
+
+        #CsharpLogo {
+            width: 16vw;
+        }
+
+        #JavaLogo {
+            width: 15vw;
+        }
+
+        #PythonLogo {
+            width: 15vw;
+        }
+
+        #SQLLogo {
+            width: 17vw;
+        }
+
+        #threelogos {
+            width: 22vw;
+        }
     </style>
 </head>
 
@@ -22,7 +143,6 @@
     <div id="navbar">
         <li>
             <ul style="margin-left: 0">Home</ul>
-            <ul>Skills</ul>
             <ul>Projects</ul>
             <ul style="margin-right: 0">Contact Me</ul>
         </li>
@@ -30,134 +150,86 @@
 
     <div id="content">
         <div class="cols" id="leftcol">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et
-                dolore magna
-                aliqua. Risus nec feugiat in fermentum posuere urna nec. Mauris vitae ultricies leo integer
-                malesuada.
-                Magna sit amet
-                purus gravida. Sollicitudin nibh sit amet commodo nulla facilisi nullam. Tempor nec feugiat nisl
-                pretium
-                fusce id velit
-                ut tortor. Amet luctus venenatis lectus magna. Massa ultricies mi quis hendrerit dolor. Risus sed
-                vulputate odio ut enim
-                blandit volutpat maecenas volutpat. Sit amet mattis vulputate enim nulla aliquet porttitor lacus
-                luctus.
-                Fermentum dui
-                faucibus in ornare quam viverra orci. Pulvinar mattis nunc sed blandit libero volutpat sed cras
-                ornare.
-                Eget lorem dolor
-                sed viverra ipsum. Facilisis volutpat est velit egestas dui id ornare arcu odio.
-
-                Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Proin fermentum leo
-                vel
-                orci porta non
-                pulvinar. Cras sed felis eget velit aliquet sagittis id. Diam vel quam elementum pulvinar. Faucibus
-                et
-                molestie ac
-                feugiat sed lectus. Habitant morbi tristique senectus et netus et malesuada fames ac. Cursus metus
-                aliquam eleifend mi
-                in nulla posuere sollicitudin. Faucibus turpis in eu mi bibendum neque egestas. Fermentum iaculis eu
-                non
-                diam phasellus
-                vestibulum lorem sed. Ornare quam viverra orci sagittis eu volutpat. Nec dui nunc mattis enim ut
-                tellus
-                elementum.
-            </p>
+            <div id="leftcol-content">
+                <h2>Introduction</h2>
+                <h2>Skills</h2>
+                <h2>Tools</h2>
+            </div>
         </div>
 
         <div class="cols" id="rightcol">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et
-                dolore magna
-                aliqua. Risus nec feugiat in fermentum posuere urna nec. Mauris vitae ultricies leo integer
-                malesuada.
-                Magna sit amet
-                purus gravida. Sollicitudin nibh sit amet commodo nulla facilisi nullam. Tempor nec feugiat nisl
-                pretium
-                fusce id velit
-                ut tortor. Amet luctus venenatis lectus magna. Massa ultricies mi quis hendrerit dolor. Risus sed
-                vulputate odio ut enim
-                blandit volutpat maecenas volutpat. Sit amet mattis vulputate enim nulla aliquet porttitor lacus
-                luctus.
-                Fermentum dui
-                faucibus in ornare quam viverra orci. Pulvinar mattis nunc sed blandit libero volutpat sed cras
-                ornare.
-                Eget lorem dolor
-                sed viverra ipsum. Facilisis volutpat est velit egestas dui id ornare arcu odio.
-
-                Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Proin fermentum leo
-                vel
-                orci porta non
-                pulvinar. Cras sed felis eget velit aliquet sagittis id. Diam vel quam elementum pulvinar. Faucibus
-                et
-                molestie ac
-                feugiat sed lectus. Habitant morbi tristique senectus et netus et malesuada fames ac. Cursus metus
-                aliquam eleifend mi
-                in nulla posuere sollicitudin. Faucibus turpis in eu mi bibendum neque egestas. Fermentum iaculis eu
-                non
-                diam phasellus
-                vestibulum lorem sed. Ornare quam viverra orci sagittis eu volutpat. Nec dui nunc mattis enim ut
-                tellus
-                elementum.
-
-                Donec ac odio tempor orci dapibus. Cras ornare arcu dui vivamus arcu felis bibendum. Nibh mauris
-                cursus
-                mattis molestie.
-                Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Sit amet luctus venenatis
-                lectus. Eu facilisis
-                sed odio morbi quis commodo odio. Posuere urna nec tincidunt praesent semper feugiat. Pulvinar
-                mattis
-                nunc sed blandit
-                libero volutpat sed cras. Sit amet nisl purus in mollis nunc sed id. Eu lobortis elementum nibh
-                tellus
-                molestie.
-                Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Tellus cras adipiscing enim eu turpis
-                egestas pretium. Ac
-                tortor vitae purus faucibus ornare suspendisse. Consectetur purus ut faucibus pulvinar elementum
-                integer
-                enim neque.
-                Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum. Enim lobortis scelerisque
-                fermentum dui.
-                Venenatis cras sed felis eget velit aliquet sagittis. Diam in arcu cursus euismod. Ullamcorper sit
-                amet
-                risus nullam
-                eget. Ultrices dui sapien eget mi proin sed libero enim sed.
-
-                Convallis tellus id interdum velit laoreet id. Hac habitasse platea dictumst vestibulum rhoncus est
-                pellentesque elit
-                ullamcorper. Fames ac turpis egestas sed tempus urna et. Et molestie ac feugiat sed lectus.
-                Tristique
-                senectus et netus
-                et malesuada fames ac turpis. Aenean pharetra magna ac placerat vestibulum lectus mauris. Elit duis
-                tristique
-                sollicitudin nibh sit. Egestas erat imperdiet sed euismod nisi. Ultricies integer quis auctor elit
-                sed
-                vulputate mi sit.
-                Mauris a diam maecenas sed enim ut sem viverra aliquet. Id nibh tortor id aliquet lectus proin nibh
-                nisl
-                condimentum. Et
-                netus et malesuada fames ac turpis egestas maecenas pharetra. Habitasse platea dictumst quisque
-                sagittis. Malesuada
-                fames ac turpis egestas integer eget aliquet nibh praesent. Vitae turpis massa sed elementum tempus.
-                Lorem donec massa
-                sapien faucibus et molestie ac. Erat nam at lectus urna duis. Facilisi morbi tempus iaculis urna.
-                Elit
-                at imperdiet dui
-                accumsan sit amet nulla facilisi.
-
-                Velit laoreet id donec ultrices tincidunt arcu. Diam maecenas ultricies mi eget mauris pharetra et
-                ultrices. Aliquam
-                nulla facilisi cras fermentum odio eu. Eget arcu dictum varius duis at consectetur. Gravida arcu ac
-                tortor dignissim
-                convallis aenean et. Dictumst quisque sagittis purus sit amet volutpat. Elit eget gravida cum
-                sociis.
-                Purus ut faucibus
-                pulvinar elementum integer. Facilisis volutpat est velit egestas dui id ornare arcu odio. Lobortis
-                elementum nibh tellus
-                molestie nunc non. Nisi lacus sed viverra tellus in hac. Eu consequat ac felis donec et. Curabitur
-                gravida arcu ac
-                tortor dignissim convallis aenean et tortor. Tellus integer feugiat scelerisque varius morbi.</p>
+            <div id="rightcol-content">
+                <div id="Introduction">
+                    <h1>Introduction</h1>
+                    <div id="introduction-content">
+                        <img src="img/Headshot.jpg" id="headshot">
+                        <p>Hello, I'm Krishna Biniwale, a dedicated and aspiring Computer Science student at the
+                            University
+                            of
+                            Southern California
+                            in Los Angeles, with an expected graduation date in May 2026. I am a highly motivated
+                            individual
+                            with a
+                            strong academic
+                            foundation, as reflected in my impressive GPA of 3.96. My passion for technology and
+                            innovation
+                            is
+                            further exemplified
+                            through my professional experiences, where I have actively contributed to cutting-edge
+                            projects
+                            and
+                            have
+                            continuously
+                            expanded my technical skillset. With a keen eye for problem-solving and a drive for
+                            excellence,
+                            I am
+                            excited to share my
+                            journey and expertise with you. You can connect with me through various channels, such as
+                            LinkedIn
+                            and
+                            GitHub, or
+                            explore this website to get a closer look at my work. Let's dive into my academic and
+                            professional endeavors that
+                            have shaped my journey thus far.</p>
+                    </div>
+                </div>
+                <div id="Skills">
+                    <h1>Skills</h1>
+                    <p style="text-align: center;">I am skilled in the following programming languages:</p>
+                    <div id="programming-languages2">
+                        <div style="margin-left:0%;" class="programming-languages-logo">
+                            <img id="PythonLogo" src="img/logos/PythonLogo.png">
+                        </div>
+                        <div class="programming-languages-logo">
+                            <img src="img/logos/JS-HTML-CSSLogo.png" id="threelogos">
+                        </div>
+                        <div class="programming-languages-logo">
+                            <img id="JavaLogo" src="img/logos/JavaLogo.png">
+                        </div>
+                    </div>
+                    <div id="programming-languages1">
+                        <div class="programming-languages-logo">
+                            <img id="CLogo" src="img/logos/CLogo.png">
+                        </div>
+                        <div class="programming-languages-logo">
+                            <img id="CppLogo" src="img/logos/C++Logo.png">
+                        </div>
+                        <div class="programming-languages-logo">
+                            <img id="SQLLogo" src="img/logos/SQLLogo.png">
+                        </div>
+                        <div style="margin:0%;" class="programming-languages-logo">
+                            <img id="CsharpLogo" src="img/logos/CsharpLogo.png">
+                        </div>
+                    </div>
+                    <!--<p style="text-align:center;">As well as the following tools:</p>
+                    <div id="tools1">
+                        <p>Tools</p>
+                    </div>
+                    <div id="tools2">
+                        <p>Tools</p>
+                    </div>-->
+                </div>
+            </div>
         </div>
     </div>
 
