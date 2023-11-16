@@ -27,3 +27,15 @@ footer {
 footer .nav-item {
     font-size: 1rem;
 }
+
+.reveal {
+    position: relative;
+    transform: translateY(150);
+    opacity: 0;
+    transition: 2.5s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
