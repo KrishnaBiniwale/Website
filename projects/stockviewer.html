@@ -18,17 +18,62 @@
 
 <body>
     <div class="navigation"></div>
-    <div class="container-fluid px-4 py-5 my-5">
+    <div class="container px-4 py-5 my-5">
         <h1 class="display-5 fw-text-body-emphasis fw-bold text-center mb-4">Stock Viewer</h1>
-    </div>
-    <div class="footer">
-    </div>
-    <script src="../scripts/modular.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        <div class="row">
+            <p class="fs-4 mb-5 text-center"><strong>Stock Viewer</strong> is an application that allows users to view
+                the past and current prices of various stocks.
+                Users are able to search for a stock based on its name and/or ticker, which queries the database to
+                retrieve the appropriate stock.
+                The user can then click on the stock they want to select, which takes them to a new page which displays
+                visuals about the stock and its prices.
+                The application also gives users the ability to conduct in-depth stock analysis by offering
+                comprehensive insights that stock.
+
+            </p>
+            <div class="row w-50 mx-auto mb-5">
+                <a class="btn btn-success btn-lg px-4 fs-3" href="stockviewer/stockviewer.zip" download="StockViewer"
+                    role="button">Download Stock Viewer</a>
+            </div>
+        </div>
+        <div class="accordion accordion-flush border" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Tools
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body fs-5">
+                        <p>
+                            I embarked on the creation of a sophisticated Python web application dedicated to stock
+                            analysis, utilizing a
+                            comprehensive tech stack that includes <strong>Python</strong>, <strong>Flask</strong>,
+                            <strong>HTML</strong>, <strong>Kaggle API</strong>, and <strong>SQLite</strong>. This
+                            ambitious project involved the
+                            architectural design and meticulous development of a dynamic web application specifically
+                            employing the <strong>Flask
+                                framework</strong>. I seamlessly integrated the powerful capabilities of the
+                            <strong>Kaggle API</strong>, enhancing
+                            the application's functionality by facilitating the retrieval of datasets from Kaggle. To
+                            ensure efficient data
+                            management, I implemented a robust SQL Database utilizing <strong>SQLite</strong>,
+                            effectively storing and organizing
+                            CSV files for seamless data querying.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+        <script src="../scripts/modular.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
