@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <style>
+            th, td {
+                border:1px solid grey;
+            }
+
+            .td-radio {
+                border:0px;
+            }
+
+            form {
+                margin-bottom: 50px;
+            }
+
+            #selectstock {
+                margin-top: 20px;
+                margin-left: 40px;
+            }
+        </style>
+    </head>
+    <body>
+    <h2>Enter the stock ticker and/or the stock name for the stock you want to view</h2>
+    <form action="/findstock" method="POST">
+            <input style="width:15%;" name="stockticker" placeholder="Enter stock ticker (i.e. MSFT)">
+            <input style="width:15%;" name="stockname" placeholder="Enter stock name (i.e. Microsoft)">
+            <input type="submit" value="Find stocks">
+    </form>
+    <form action="/stockdata" method="POST">
+        <table>
+                {% if result|length != 0%}
+                <tr>
+                    <th class="td-radio"></th>
+                    <th style="border:0;">Ticker</th>
+                    <th style="border:0;">Name</th>
+                </tr>
+                {% endif %}
+
+                {% for item in result %}
+                <tr>
+                    <td class="td-radio"><input type="radio" name="selected_ticker" value="{{item[0]}}"></td>
+                    <td>{{item[0]}}</td>
+                    <td>{{item[1]}}</td>
+                </tr>
+                {% endfor %}
+
+                {% if result|length == 0%}
+                <h4>Results will apear here if your search is valid</h4>
+                {% endif %}
+        </table>
+        {% if result|length != 0%}
+        <input id="selectstock" type="submit" value="Select stock">
+        {% endif %}
+    </form>
+
+    </body>
+</html>

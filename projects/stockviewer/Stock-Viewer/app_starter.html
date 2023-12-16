@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module app_starter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>app_starter</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/greg/Documents/Spring2022/ITP216/PyCharmProjects/myProject/Week11DatabasesTues/ITP-216%20H11%20Starter%20Code/app_starter.py">/Users/greg/Documents/Spring2022/ITP216/PyCharmProjects/myProject/Week11DatabasesTues/ITP-216 H11 Starter Code/app_starter.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="sqlite3.html">sqlite3</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-client"><strong>client</strong></a>()</dt><dd><tt>Renders&nbsp;appropriate&nbsp;template&nbsp;(admin&nbsp;or&nbsp;user)<br>
+&nbsp;<br>
+:return:&nbsp;redirects&nbsp;home&nbsp;if&nbsp;not&nbsp;logged&nbsp;in,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;renders&nbsp;admin.html&nbsp;if&nbsp;logged&nbsp;in&nbsp;as&nbsp;admin,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user.html&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-create_user"><strong>create_user</strong></a>()</dt><dd><tt>Callable&nbsp;from&nbsp;admin.html&nbsp;only<br>
+Adds&nbsp;a&nbsp;new&nbsp;user&nbsp;to&nbsp;db&nbsp;by&nbsp;calling&nbsp;db_create_user,&nbsp;then&nbsp;re-renders&nbsp;admin&nbsp;template<br>
+&nbsp;<br>
+:return:&nbsp;redirects&nbsp;to&nbsp;home&nbsp;if&nbsp;user&nbsp;not&nbsp;logged&nbsp;in,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;re-renders&nbsp;admin.html&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-db_check_creds"><strong>db_check_creds</strong></a>(un: str, pw: str) -&gt; bool</dt><dd><tt>Checks&nbsp;to&nbsp;see&nbsp;if&nbsp;supplied&nbsp;username&nbsp;and&nbsp;password&nbsp;are&nbsp;in&nbsp;the&nbsp;DB's&nbsp;credentials&nbsp;table<br>
+&nbsp;<br>
+:param&nbsp;un:&nbsp;username&nbsp;to&nbsp;check<br>
+:param&nbsp;pw:&nbsp;password&nbsp;to&nbsp;check<br>
+:return:&nbsp;True&nbsp;if&nbsp;both&nbsp;username&nbsp;and&nbsp;password&nbsp;are&nbsp;correct,&nbsp;False&nbsp;otherwise.</tt></dd></dl>
+ <dl><dt><a name="-db_create_user"><strong>db_create_user</strong></a>(un: str, pw: str) -&gt; None</dt><dd><tt>Add&nbsp;provided&nbsp;user&nbsp;and&nbsp;password&nbsp;to&nbsp;the&nbsp;credentials&nbsp;table<br>
+Add&nbsp;provided&nbsp;user&nbsp;to&nbsp;the&nbsp;userfoods&nbsp;table<br>
+and&nbsp;sets&nbsp;their&nbsp;favorite&nbsp;food&nbsp;to&nbsp;"not&nbsp;set&nbsp;yet"<br>
+&nbsp;<br>
+:param&nbsp;un:&nbsp;username&nbsp;to&nbsp;create<br>
+:param&nbsp;pw:&nbsp;password&nbsp;to&nbsp;create<br>
+:return:&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-db_get_food"><strong>db_get_food</strong></a>(un: str) -&gt; str</dt><dd><tt>Gets&nbsp;the&nbsp;provided&nbsp;user's&nbsp;favorite&nbsp;food&nbsp;from&nbsp;the&nbsp;DB<br>
+:param&nbsp;un:&nbsp;username&nbsp;to&nbsp;get&nbsp;favorite&nbsp;food&nbsp;of<br>
+:return:&nbsp;the&nbsp;favorite&nbsp;food&nbsp;of&nbsp;the&nbsp;provided&nbsp;user&nbsp;as&nbsp;a&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-db_get_user_list"><strong>db_get_user_list</strong></a>() -&gt; dict</dt><dd><tt>Queries&nbsp;the&nbsp;DB's&nbsp;userfoods&nbsp;table&nbsp;to&nbsp;get&nbsp;a&nbsp;list<br>
+of&nbsp;all&nbsp;the&nbsp;user&nbsp;and&nbsp;their&nbsp;corresponding&nbsp;favorite&nbsp;food&nbsp;for&nbsp;display&nbsp;on&nbsp;admin.html<br>
+&nbsp;<br>
+:return:&nbsp;a&nbsp;dictionary&nbsp;with&nbsp;username&nbsp;as&nbsp;key&nbsp;and&nbsp;their&nbsp;favorite&nbsp;food&nbsp;as&nbsp;value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this&nbsp;is&nbsp;what&nbsp;populates&nbsp;the&nbsp;'result'&nbsp;variable&nbsp;in&nbsp;the&nbsp;admin.html&nbsp;template</tt></dd></dl>
+ <dl><dt><a name="-db_remove_user"><strong>db_remove_user</strong></a>(un: str) -&gt; None</dt><dd><tt>Removes&nbsp;provided&nbsp;user&nbsp;from&nbsp;all&nbsp;DB&nbsp;tables<br>
+&nbsp;<br>
+:param&nbsp;un:&nbsp;username&nbsp;to&nbsp;remove&nbsp;from&nbsp;DB<br>
+:return:&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-db_set_food"><strong>db_set_food</strong></a>(un: str, ff: str) -&gt; None</dt><dd><tt>Sets&nbsp;the&nbsp;favorite&nbsp;food&nbsp;of&nbsp;user,&nbsp;un&nbsp;param,&nbsp;to&nbsp;new&nbsp;incoming&nbsp;ff&nbsp;(favorite&nbsp;food)&nbsp;param<br>
+&nbsp;<br>
+:param&nbsp;un:&nbsp;username&nbsp;to&nbsp;update&nbsp;favorite&nbsp;food&nbsp;of<br>
+:param&nbsp;ff:&nbsp;user's&nbsp;new&nbsp;favorite&nbsp;food<br>
+:return:&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-home"><strong>home</strong></a>()</dt><dd><tt>Checks&nbsp;whether&nbsp;the&nbsp;user&nbsp;is&nbsp;logged&nbsp;in&nbsp;and&nbsp;returns&nbsp;appropriately.<br>
+&nbsp;<br>
+:return:&nbsp;renders&nbsp;login.html&nbsp;if&nbsp;not&nbsp;logged&nbsp;in,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;redirects&nbsp;to&nbsp;client&nbsp;otherwise.</tt></dd></dl>
+ <dl><dt><a name="-login"><strong>login</strong></a>()</dt><dd><tt>Allows&nbsp;client&nbsp;to&nbsp;log&nbsp;in<br>
+Calls&nbsp;db_check_creds&nbsp;to&nbsp;see&nbsp;if&nbsp;supplied&nbsp;username&nbsp;and&nbsp;password&nbsp;are&nbsp;correct<br>
+&nbsp;<br>
+:return:&nbsp;redirects&nbsp;to&nbsp;client&nbsp;if&nbsp;login&nbsp;correct,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;redirects&nbsp;back&nbsp;to&nbsp;home&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-logout"><strong>logout</strong></a>()</dt><dd><tt>Logs&nbsp;client&nbsp;out,&nbsp;then&nbsp;routes&nbsp;to&nbsp;login<br>
+Remove&nbsp;the&nbsp;user&nbsp;from&nbsp;the&nbsp;session<br>
+:return:&nbsp;redirects&nbsp;back&nbsp;to&nbsp;home</tt></dd></dl>
+ <dl><dt><a name="-remove_user"><strong>remove_user</strong></a>()</dt><dd><tt>Callable&nbsp;from&nbsp;admin.html&nbsp;only<br>
+Removes&nbsp;user&nbsp;from&nbsp;the&nbsp;db&nbsp;by&nbsp;calling&nbsp;db_remove_user,&nbsp;then&nbsp;re-renders&nbsp;admin&nbsp;template.<br>
+&nbsp;<br>
+:return:&nbsp;redirects&nbsp;to&nbsp;home&nbsp;if&nbsp;user&nbsp;not&nbsp;logged&nbsp;in,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;re-renders&nbsp;admin.html&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-set_food"><strong>set_food</strong></a>()</dt><dd><tt>Callable&nbsp;from&nbsp;user.html&nbsp;only,<br>
+Updates&nbsp;user&nbsp;food&nbsp;by&nbsp;calling&nbsp;db_set_food,&nbsp;then&nbsp;re-renders&nbsp;user&nbsp;template<br>
+&nbsp;<br>
+:return:&nbsp;redirects&nbsp;to&nbsp;home&nbsp;if&nbsp;user&nbsp;not&nbsp;logged&nbsp;in,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;re-renders&nbsp;user.html&nbsp;otherwise</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>app</strong> = &lt;Flask 'app_starter'&gt;<br>
+<strong>db</strong> = 'favouriteFoods.db'<br>
+<strong>request</strong> = &lt;LocalProxy unbound&gt;<br>
+<strong>session</strong> = &lt;LocalProxy unbound&gt;</td></tr></table>
+</body></html>
